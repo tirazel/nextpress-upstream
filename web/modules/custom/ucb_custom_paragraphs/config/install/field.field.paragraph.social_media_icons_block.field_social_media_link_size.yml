@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_link_size
+    - paragraphs.paragraphs_type.social_media_icons_block
+  module:
+    - options
+id: paragraph.social_media_icons_block.field_social_media_link_size
+field_name: field_social_media_link_size
+entity_type: paragraph
+bundle: social_media_icons_block
+label: 'Social Media Link Size'
+description: 'Field to set the size of the icons from the list of values'
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

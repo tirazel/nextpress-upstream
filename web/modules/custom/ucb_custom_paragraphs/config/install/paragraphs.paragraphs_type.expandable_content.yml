@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: expandable_content
+label: 'Expandable Content'
+icon_uuid: null
+icon_default: null
+description: 'A paragraph that allows users to implement tab and accordion content on their web page.'
+behavior_plugins: {  }

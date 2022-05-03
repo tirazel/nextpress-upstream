@@ -1,0 +1,100 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ucb_article.body
+    - field.field.node.ucb_article.field_ucb_article_byline
+    - field.field.node.ucb_article.field_ucb_article_categories
+    - field.field.node.ucb_article.field_ucb_article_content
+    - field.field.node.ucb_article.field_ucb_article_external_url
+    - field.field.node.ucb_article.field_ucb_article_image
+    - field.field.node.ucb_article.field_ucb_article_summary
+    - field.field.node.ucb_article.field_ucb_article_tags
+    - field.field.node.ucb_article.field_ucb_article_thumbnail
+    - node.type.ucb_article
+  module:
+    - entity_reference_revisions
+    - link
+    - user
+id: node.ucb_article.default
+targetEntityType: node
+bundle: ucb_article
+mode: default
+content:
+  field_ucb_article_byline:
+    weight: 106
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ucb_article_categories:
+    weight: 104
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ucb_article_content:
+    type: entity_reference_revisions_entity_view
+    weight: 108
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_ucb_article_external_url:
+    weight: 107
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_ucb_article_image:
+    type: entity_reference_entity_view
+    weight: 102
+    label: hidden
+    settings:
+      view_mode: original_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_ucb_article_summary:
+    weight: 109
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_ucb_article_tags:
+    weight: 105
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_ucb_article_thumbnail:
+    type: entity_reference_entity_view
+    weight: 103
+    label: hidden
+    settings:
+      view_mode: original_image
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true

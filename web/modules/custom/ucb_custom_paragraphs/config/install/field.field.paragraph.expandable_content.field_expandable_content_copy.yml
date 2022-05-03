@@ -1,0 +1,105 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_expandable_content_copy
+    - paragraphs.paragraphs_type.expandable_content
+    - paragraphs.paragraphs_type.expandable_content_text
+  module:
+    - entity_reference_revisions
+id: paragraph.expandable_content.field_expandable_content_copy
+field_name: field_expandable_content_copy
+entity_type: paragraph
+bundle: expandable_content
+label: Text
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      expandable_content_text: expandable_content_text
+    negate: 0
+    target_bundles_drag_drop:
+      article_content:
+        weight: 27
+        enabled: false
+      blockquote:
+        weight: 28
+        enabled: false
+      cards_grid_layout:
+        weight: 29
+        enabled: false
+      columns_grid_layout:
+        weight: 30
+        enabled: false
+      content_grid:
+        weight: 31
+        enabled: false
+      content_row:
+        weight: 32
+        enabled: false
+      expandable_content:
+        weight: 33
+        enabled: false
+      expandable_content_text:
+        weight: 34
+        enabled: true
+      features_grid_layout:
+        weight: 35
+        enabled: false
+      features_grid_layout_content:
+        weight: 36
+        enabled: false
+      grid_layout_content:
+        weight: 37
+        enabled: false
+      hero_unit:
+        weight: 38
+        enabled: false
+      media:
+        weight: 39
+        enabled: false
+      offset_grid_layout:
+        weight: 40
+        enabled: false
+      overlay_grid_layout:
+        weight: 41
+        enabled: false
+      overlay_grid_layout_content:
+        weight: 42
+        enabled: false
+      row_layout_content:
+        weight: 43
+        enabled: false
+      slider:
+        weight: 44
+        enabled: false
+      slider_image:
+        weight: 45
+        enabled: false
+      teaser_alternate_grid_layout:
+        weight: 46
+        enabled: false
+      teaser_alternate_row_layout:
+        weight: 47
+        enabled: false
+      teaser_grid_layout:
+        weight: 48
+        enabled: false
+      teaser_row_layout:
+        weight: 49
+        enabled: false
+      text_block:
+        weight: 50
+        enabled: false
+      tiles_grid_layout:
+        weight: 51
+        enabled: false
+      tiles_row_layout:
+        weight: 52
+        enabled: false
+field_type: entity_reference_revisions

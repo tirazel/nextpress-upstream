@@ -1,0 +1,24 @@
+name: 'UCB Custom Content Types'
+description: 'Default content types used by the CU Boulder website'
+type: module
+core_version_requirement: '^8.9 || ^9'
+dependencies:
+  - entity_reference_revisions
+  - field
+  - field_group
+  - image
+  - link
+  - media
+  - media_library
+  - node
+  - paragraphs
+  - path
+  - pathauto
+  - rdf
+  - taxonomy
+  - telephone
+  - text
+  - ucb_custom_paragraphs
+  - user
+version: '1.0.11'
+package: 'UCB Custom Page Types'

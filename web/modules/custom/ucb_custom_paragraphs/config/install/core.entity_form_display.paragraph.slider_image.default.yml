@@ -1,0 +1,101 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.slider_image.field_slide_link
+    - field.field.paragraph.slider_image.field_slide_text
+    - field.field.paragraph.slider_image.field_slider_slide_image
+    - paragraphs.paragraphs_type.slider_image
+  module:
+    - field_group
+    - media_library
+    - text
+third_party_settings:
+  field_group:
+    group_slide_settings:
+      children:
+        - group_image
+        - group_slide_text
+        - group_links
+      parent_name: ''
+      weight: 0
+      format_type: tabs
+      region: content
+      format_settings:
+        direction: horizontal
+        id: ''
+        classes: ''
+      label: 'Slide Settings'
+    group_image:
+      children:
+        - field_slider_slide_image
+      parent_name: group_slide_settings
+      weight: 2
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Image
+    group_slide_text:
+      children:
+        - field_slide_text
+      parent_name: group_slide_settings
+      weight: 3
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: 'Slide Text'
+    group_links:
+      children:
+        - field_slide_link
+      parent_name: group_slide_settings
+      weight: 4
+      format_type: tab
+      region: content
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Links
+id: paragraph.slider_image.default
+targetEntityType: paragraph
+bundle: slider_image
+mode: default
+content:
+  field_slide_link:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_slide_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_slider_slide_image:
+    type: media_library_widget
+    weight: 3
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  status: true

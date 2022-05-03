@@ -1,0 +1,32 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expandable_content.field_expandable_content_copy
+    - field.field.paragraph.expandable_content.field_expandable_content_type
+    - paragraphs.paragraphs_type.expandable_content
+  module:
+    - entity_reference_revisions
+    - options
+id: paragraph.expandable_content.default
+targetEntityType: paragraph
+bundle: expandable_content
+mode: default
+content:
+  field_expandable_content_copy:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_expandable_content_type:
+    type: list_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

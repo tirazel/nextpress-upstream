@@ -1,0 +1,91 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_below_content
+    - node.type.page
+    - paragraphs.paragraphs_type.content_grid
+    - paragraphs.paragraphs_type.content_row
+    - paragraphs.paragraphs_type.events_calendar
+    - paragraphs.paragraphs_type.expandable_content
+    - paragraphs.paragraphs_type.hero_unit
+    - paragraphs.paragraphs_type.image_gallery
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.social_media_icons_block
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - entity_reference_revisions
+id: node.page.field_below_content
+field_name: field_below_content
+entity_type: node
+bundle: page
+label: 'Below Content'
+description: 'Place content below the main page content'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_unit: hero_unit
+      slider: slider
+      text_block: text_block
+      content_grid: content_grid
+      expandable_content: expandable_content
+      events_calendar: events_calendar
+      image_gallery: image_gallery
+      content_row: content_row
+      social_media_icons_block: social_media_icons_block
+    negate: 0
+    target_bundles_drag_drop:
+      article_content:
+        weight: 6
+        enabled: false
+      blockquote:
+        weight: 9
+        enabled: false
+      content_grid:
+        weight: 14
+        enabled: true
+      content_row:
+        weight: 27
+        enabled: true
+      events_calendar:
+        weight: 21
+        enabled: true
+      expandable_content:
+        weight: 19
+        enabled: true
+      expandable_content_text:
+        weight: 20
+        enabled: false
+      grid_layout_content:
+        weight: 15
+        enabled: false
+      hero_unit:
+        weight: 5
+        enabled: true
+      image_gallery:
+        weight: 24
+        enabled: true
+      media:
+        weight: 11
+        enabled: false
+      row_layout_content:
+        weight: 36
+        enabled: false
+      slider:
+        weight: 6
+        enabled: true
+      slider_image:
+        weight: 7
+        enabled: false
+      social_media_icons_block:
+        weight: 27
+        enabled: true
+      text_block:
+        weight: 8
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ucb_article_page
+label: 'UCB Article page'
+type: 'canonical_entities:node'
+pattern: '/[node:created:custom:Y]/[node:created:custom:m]/[node:created:custom:d]/[node:title]'
+selection_criteria:
+  d740c891-31be-4d45-acef-cb6bbb67c047:
+    id: node_type
+    bundles:
+      ucb_article: ucb_article
+    negate: false
+    context_mapping:
+      node: node
+    uuid: d740c891-31be-4d45-acef-cb6bbb67c047
+selection_logic: and
+weight: -5
+relationships: {  }

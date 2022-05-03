@@ -1,0 +1,19 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.events_calendar.field_calendar_code
+    - paragraphs.paragraphs_type.events_calendar
+id: paragraph.events_calendar.default
+targetEntityType: paragraph
+bundle: events_calendar
+mode: default
+content:
+  field_calendar_code:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

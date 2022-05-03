@@ -1,0 +1,63 @@
+{#
+/**
+ * Theme layout to display a Basic Page.
+ *
+ */
+#}
+
+{{ attach_library('ucb2021_base/ucb-page') }}
+
+{%
+  set classes = [
+  'node',
+  'node--type-' ~ node.bundle|clean_class,
+  node.isPromoted() ? 'node--promoted',
+  node.isSticky() ? 'node--sticky',
+  not node.isPublished() ? 'node--unpublished',
+  view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+]
+%}
+
+{% set sidebar_position = drupal_config('ucb2021_base.settings', 'ucb_sidebar_position') %}
+
+<article{{attributes.addClass(classes)}}>
+  {% if content.field_above_content.0 is not null %}
+    {{ content.field_above_content }}
+  {% endif %}
+  {{ drupal_block('system_breadcrumb_block') }}
+
+  <div class="container">
+    <h1{{ title_attributes }}> {{ label }} </h1>
+  </div>
+
+  <div class="container mb-4">
+    {% if content.field_sidebar.0 is not null %}
+      <div class="row">
+        {# Left sidebar is present #}
+        {% if sidebar_position is same as("0") %}
+          <div class="col-sm-4">
+            {{content.field_sidebar }}
+          </div>
+        {% endif %}
+        <div class="col-sm-8">
+          {{ content.field_above_body_block }}
+          {{ content.body }}
+          {{ content.field_below_body_block }}
+        </div>
+        {# Right sidebar is present #}
+        {% if sidebar_position is same as("1") %}
+          <div class="col-sm-4">
+            {{content.field_sidebar }}
+          </div>
+        {% endif %}
+      </div>
+    {% else %}
+      {{ content.field_above_body_block }}
+      {{ content.body }}
+      {{ content.field_below_body_block }}
+    {% endif %}
+  </div> 
+  <div class="mb-4">
+    {{ content.field_below_content }}
+  </div>
+</article>

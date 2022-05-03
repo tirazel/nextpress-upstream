@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: events_calendar
+label: 'Events Calendar'
+icon_uuid: null
+icon_default: null
+description: 'Paragraph that allows event calendar embed code to be displayed.'
+behavior_plugins: {  }

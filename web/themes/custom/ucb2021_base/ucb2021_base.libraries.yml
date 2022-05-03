@@ -1,0 +1,123 @@
+ucb-global:
+  version: 1.x
+  css:
+    layout:
+      css/bootstrap/bootstrap.min.css: {}
+      css/layout.css: {}
+    theme:
+      css/style.css: {}
+      css/style-responsive.css: {}
+      css/fontawesome/all.min.css: {}
+      css/styleguide/branding.css: {}
+      css/styleguide/buttons.css: {}
+      css/styleguide/colors.css: {}
+      css/styleguide/type.css: {}
+      css/styleguide/icons.css: {}
+  js:
+    js/bootstrap/bootstrap.bundle.min.js: {}
+    js/ucb-main.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+ucb-paragraphs:
+  version: 1.x
+  css:
+    theme:
+      css/paragraphs/article-content.css: {}
+      css/paragraphs/hero-unit.css: {}
+      css/paragraphs/slider.css: {}
+      css/paragraphs/text-block.css: {}
+
+ucb-views:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-views.css: {}
+
+ucb-user-login:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-user-login.css: {}
+
+ucb-social-media:
+  version: 1.x
+  css:
+    theme:
+      css/social-media.css: {}
+
+ucb-howto-page:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-howto.css: {}
+
+ucb-guide-page:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-guide.css: {}
+  js:
+    js/ucb-guide.js: {}
+
+ucb-page:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-page.css: {}
+
+ucb-person:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-person.css: {}
+
+ucb-article:
+  version: 1.x
+  css:
+    theme:
+      css/ucb-article.css: {}
+
+ucb-content-grid:
+  version: 1.x
+  js:
+    js/ucb-equalize-height.js: {}
+  css:
+    theme:
+      css/paragraphs/content-grid.css: {}
+
+ucb-content-row:
+  version: 1.x
+  css:
+    theme:
+      css/paragraphs/content-row.css: {}
+
+ucb-expandable-content:
+  version: 1.x
+  css:
+    theme:
+      css/paragraphs/expandable-content.css: {}
+
+ucb-social-media-icons-block:
+  version: 1.x
+  css:
+    theme:
+      css/paragraphs/social-media-icons.css: {}
+
+
+ucb-image-gallery:
+  version: 1.x
+  js:
+    js/glightbox/glightbox.min.js: {}
+    js/glightbox/ucb-gallery-lightbox-settings.js: {}
+  css:
+    theme:
+      css/paragraphs/image-gallery.css: {}
+      js/glightbox/glightbox.min.css: {}
+
+ucb-events-calendar:
+  version: 1.x
+  css:
+    theme:
+      css/paragraphs/events-calendar.css: {}

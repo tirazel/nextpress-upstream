@@ -1,0 +1,49 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.content_grid.field_grid_column_count
+    - field.field.paragraph.content_grid.field_grid_image_style
+    - field.field.paragraph.content_grid.field_grid_layout_content
+    - field.field.paragraph.content_grid.field_grid_layout_selection
+    - paragraphs.paragraphs_type.content_grid
+  module:
+    - paragraphs
+id: paragraph.content_grid.default
+targetEntityType: paragraph
+bundle: content_grid
+mode: default
+content:
+  field_grid_column_count:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_grid_image_style:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_grid_layout_content:
+    type: entity_reference_paragraphs
+    weight: 3
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_grid_layout_selection:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

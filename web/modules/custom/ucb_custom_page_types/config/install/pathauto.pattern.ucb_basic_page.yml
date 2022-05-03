@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ucb_basic_page
+label: 'UCB Basic Page'
+type: 'canonical_entities:node'
+pattern: '/[node:title]'
+selection_criteria:
+  cd039fc0-4306-4b47-9718-c099c398517e:
+    id: node_type
+    bundles:
+      page: page
+    negate: false
+    context_mapping:
+      node: node
+    uuid: cd039fc0-4306-4b47-9718-c099c398517e
+selection_logic: and
+weight: -5
+relationships: {  }

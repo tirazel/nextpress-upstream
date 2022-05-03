@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_article_image_location
+    - paragraphs.paragraphs_type.article_content
+  module:
+    - options
+id: paragraph.article_content.field_article_image_location
+field_name: field_article_image_location
+entity_type: paragraph
+bundle: article_content
+label: 'Article Image Location'
+description: 'Options for image placement. Top/Bottom is good for wide images while Left/Right are good for tall images.'
+required: false
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

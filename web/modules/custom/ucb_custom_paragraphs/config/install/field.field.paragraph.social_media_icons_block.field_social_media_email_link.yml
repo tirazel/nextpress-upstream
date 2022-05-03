@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_email_link
+    - paragraphs.paragraphs_type.social_media_icons_block
+id: paragraph.social_media_icons_block.field_social_media_email_link
+field_name: field_social_media_email_link
+entity_type: paragraph
+bundle: social_media_icons_block
+label: 'Social Media Email Link'
+description: 'An optional email field that converts to an hyperlinked email icon'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

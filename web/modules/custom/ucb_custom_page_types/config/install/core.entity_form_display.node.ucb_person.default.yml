@@ -1,0 +1,242 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.ucb_person.body
+    - field.field.node.ucb_person.field_ucb_person_address
+    - field.field.node.ucb_person.field_ucb_person_department
+    - field.field.node.ucb_person.field_ucb_person_email
+    - field.field.node.ucb_person.field_ucb_person_first_name
+    - field.field.node.ucb_person.field_ucb_person_job_type
+    - field.field.node.ucb_person.field_ucb_person_last_name
+    - field.field.node.ucb_person.field_ucb_person_links
+    - field.field.node.ucb_person.field_ucb_person_office_hours
+    - field.field.node.ucb_person.field_ucb_person_phone
+    - field.field.node.ucb_person.field_ucb_person_photo
+    - field.field.node.ucb_person.field_ucb_person_title
+    - node.type.ucb_person
+  module:
+    - field_group
+    - link
+    - media_library
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_ucb_person_tabs:
+      children:
+        - group_ucb_person_personal
+        - group_ucb_person_contact
+        - group_ucb_person_other
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      region: content
+      format_settings:
+        show_empty_fields: true
+        id: ''
+        classes: ''
+        direction: horizontal
+        width_breakpoint: 640
+      label: Tabs
+    group_ucb_person_personal:
+      children:
+        - title
+        - field_ucb_person_first_name
+        - field_ucb_person_last_name
+        - field_ucb_person_job_type
+        - field_ucb_person_title
+        - field_ucb_person_department
+        - field_ucb_person_photo
+      parent_name: group_ucb_person_tabs
+      weight: 10
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: true
+        id: ''
+        classes: ''
+        description: ''
+        formatter: open
+        required_fields: true
+      label: Personal
+    group_ucb_person_contact:
+      children:
+        - field_ucb_person_email
+        - field_ucb_person_phone
+        - field_ucb_person_links
+        - field_ucb_person_address
+        - field_ucb_person_office_hours
+      parent_name: group_ucb_person_tabs
+      weight: 11
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: true
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Contact
+    group_ucb_person_other:
+      children:
+        - body
+      parent_name: group_ucb_person_tabs
+      weight: 12
+      format_type: tab
+      region: content
+      format_settings:
+        show_empty_fields: true
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: Other
+id: node.ucb_person.default
+targetEntityType: node
+bundle: ucb_person
+mode: default
+content:
+  body:
+    weight: 18
+    settings:
+      rows: 6
+      placeholder: ''
+      summary_rows: 3
+      show_summary: false
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_ucb_person_address:
+    weight: 16
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ucb_person_department:
+    weight: 10
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ucb_person_email:
+    weight: 13
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_ucb_person_first_name:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ucb_person_job_type:
+    weight: 8
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_ucb_person_last_name:
+    weight: 7
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_ucb_person_links:
+    weight: 15
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_ucb_person_office_hours:
+    weight: 17
+    settings:
+      rows: 4
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_ucb_person_phone:
+    weight: 14
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_ucb_person_photo:
+    type: media_library_widget
+    weight: 12
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+    region: content
+  field_ucb_person_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+      match_limit: 10
+    region: content
+    third_party_settings: {  }
+hidden:
+  promote: true
+  sticky: true

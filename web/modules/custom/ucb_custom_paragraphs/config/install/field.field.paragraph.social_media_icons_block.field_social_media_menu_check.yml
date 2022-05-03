@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_social_media_menu_check
+    - paragraphs.paragraphs_type.social_media_icons_block
+id: paragraph.social_media_icons_block.field_social_media_menu_check
+field_name: field_social_media_menu_check
+entity_type: paragraph
+bundle: social_media_icons_block
+label: 'Social Media Menu Check'
+description: 'Checkbox to use the existing social media links in the social media menu'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

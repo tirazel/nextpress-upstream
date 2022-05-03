@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_size
+    - paragraphs.paragraphs_type.slider
+  module:
+    - options
+id: paragraph.slider.field_size
+field_name: field_size
+entity_type: paragraph
+bundle: slider
+label: Size
+description: "Set the height size of your slider. Slider width is responsive.\r\nLarge is best for above content sliders but can also work well in body content.\r\nMediums is best for body content sliders\r\nSmall is best for sidebar sliders."
+required: true
+translatable: true
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

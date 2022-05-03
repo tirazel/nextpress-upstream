@@ -1,0 +1,83 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.wysiwyg
+  module:
+    - ckeditor
+format: wysiwyg
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Superscript
+            - Subscript
+        -
+          name: Media
+          items:
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - Outdent
+            - Indent
+            - Blockquote
+        -
+          name: Lists
+          items:
+            - BulletedList
+            - NumberedList
+        -
+          name: Copy-paste
+          items:
+            - Undo
+            - Redo
+            - Cut
+            - Copy
+            - Paste
+            - PasteText
+            - PasteFromWord
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: 'special chars'
+          items:
+            - HorizontalRule
+            - SpecialChar
+            - Table
+        -
+          name: Tools
+          items:
+            - Format
+            - Styles
+        -
+          name: Utilities
+          items:
+            - RemoveFormat
+        -
+          name: Shortcodes
+          items:
+            - ButtonGenerator
+            - ckeditorfa
+            - DrupalMediaLibrary
+  plugins:
+    stylescombo:
+      styles: "p.lead|Lead\r\np.hero|Hero\r\np.supersize|Supersize\r\nsmall|Small\r\nul.list-style-icon-1|Check List Style\r\nul.list-style-icon-2|Checkbox List Style\r\nul.list-style-icon-3|Double Angle List Style\r\nul.list-style-icon-4|Circle Arrow List Style\r\nul.list-style-icon-5|Star List Style\r\nul.list-style-icon-6|Finger List Style"
+    language:
+      language_list: un
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

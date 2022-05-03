@@ -1,0 +1,35 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.expandable_content.field_expandable_content_copy
+    - field.field.paragraph.expandable_content.field_expandable_content_type
+    - paragraphs.paragraphs_type.expandable_content
+  module:
+    - paragraphs
+id: paragraph.expandable_content.default
+targetEntityType: paragraph
+bundle: expandable_content
+mode: default
+content:
+  field_expandable_content_copy:
+    type: entity_reference_paragraphs
+    weight: 1
+    region: content
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+  field_expandable_content_type:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

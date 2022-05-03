@@ -1,0 +1,31 @@
+{#
+/**
+ * @file
+ * Theme to format images that appear within the Image Slider Paragraph
+ *
+#}
+{%
+  set classes = [
+    'paragraph',
+    'paragraph--type--' ~ paragraph.bundle|clean_class,
+    view_mode ? 'paragraph--view-mode--' ~ view_mode|clean_class,
+    not paragraph.isPublished() ? 'paragraph--unpublished'
+  ]
+%}
+
+{% block paragraph %}
+    {% block content %}
+      {% if paragraph.field_slide_link.value is not empty %}
+        <a href="{{ paragraph.field_slide_link.value }}">
+          {{ content.field_slider_slide_image|render }}
+        </a>
+      {% else %}
+        {{ content.field_slider_slide_image|render }}
+      {% endif %}
+      {% if paragraph.field_slide_text.value is not empty %}
+        <div class="carousel-caption d-md-block d-none">
+          <p> {{ content.field_slide_text|render }} </p>
+        </div>
+      {% endif %}
+    {% endblock %}
+{% endblock paragraph %}

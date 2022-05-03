@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: ucb_person_page
+label: 'UCB Person page'
+type: 'canonical_entities:node'
+pattern: '/people/[node:title]'
+selection_criteria:
+  0427a114-9c7e-42dd-9f22-9c21ba8de869:
+    id: node_type
+    bundles:
+      ucb_person: ucb_person
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 0427a114-9c7e-42dd-9f22-9c21ba8de869
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,62 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_icons_block.field_social_media_email_link
+    - field.field.paragraph.social_media_icons_block.field_social_media_icons_orienta
+    - field.field.paragraph.social_media_icons_block.field_social_media_link_size
+    - field.field.paragraph.social_media_icons_block.field_social_media_links
+    - field.field.paragraph.social_media_icons_block.field_social_media_menu_check
+    - paragraphs.paragraphs_type.social_media_icons_block
+  module:
+    - link
+    - options
+id: paragraph.social_media_icons_block.default
+targetEntityType: paragraph
+bundle: social_media_icons_block
+mode: default
+content:
+  field_social_media_email_link:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_social_media_icons_orienta:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_social_media_link_size:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_social_media_links:
+    type: link
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_social_media_menu_check:
+    type: boolean
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

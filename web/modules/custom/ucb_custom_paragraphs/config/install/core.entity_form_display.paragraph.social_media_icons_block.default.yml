@@ -1,0 +1,104 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.social_media_icons_block.field_social_media_email_link
+    - field.field.paragraph.social_media_icons_block.field_social_media_icons_orienta
+    - field.field.paragraph.social_media_icons_block.field_social_media_link_size
+    - field.field.paragraph.social_media_icons_block.field_social_media_links
+    - field.field.paragraph.social_media_icons_block.field_social_media_menu_check
+    - paragraphs.paragraphs_type.social_media_icons_block
+  module:
+    - field_group
+    - link
+third_party_settings:
+  field_group:
+    group_social_media_accordian:
+      children:
+        - group_default_social_media_links
+        - group_custom_social_media_links
+      label: 'Social Media Accordian'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: horizontal
+        width_breakpoint: 640
+    group_custom_social_media_links:
+      children:
+        - field_social_media_links
+        - field_social_media_email_link
+      label: 'Custom Social Media Links'
+      region: content
+      parent_name: group_social_media_accordian
+      weight: 21
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_default_social_media_links:
+      children:
+        - field_social_media_menu_check
+      label: 'Default Social Media Links'
+      region: content
+      parent_name: group_social_media_accordian
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: open
+        description: ''
+        required_fields: true
+id: paragraph.social_media_icons_block.default
+targetEntityType: paragraph
+bundle: social_media_icons_block
+mode: default
+content:
+  field_social_media_email_link:
+    type: email_default
+    weight: 6
+    region: content
+    settings:
+      placeholder: ''
+      size: 60
+    third_party_settings: {  }
+  field_social_media_icons_orienta:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_social_media_link_size:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_social_media_links:
+    type: link_default
+    weight: 5
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_social_media_menu_check:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

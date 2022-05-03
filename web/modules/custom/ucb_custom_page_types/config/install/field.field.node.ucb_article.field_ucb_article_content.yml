@@ -1,0 +1,110 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ucb_article_content
+    - node.type.ucb_article
+    - paragraphs.paragraphs_type.article_content
+    - paragraphs.paragraphs_type.hero_unit
+  module:
+    - entity_reference_revisions
+id: node.ucb_article.field_ucb_article_content
+field_name: field_ucb_article_content
+entity_type: node
+bundle: ucb_article
+label: 'Article Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      article_content: article_content
+      hero_unit: hero_unit
+    target_bundles_drag_drop:
+      article_content:
+        enabled: true
+        weight: 28
+      hero_unit:
+        enabled: true
+        weight: 29
+      news_story_accent_row:
+        weight: 30
+        enabled: false
+      news_story_content_row:
+        weight: 31
+        enabled: false
+      single_page_accordion_row:
+        weight: 32
+        enabled: false
+      single_page_bullet_list:
+        weight: 33
+        enabled: false
+      single_page_bullet_list_item:
+        weight: 34
+        enabled: false
+      single_page_content_cards:
+        weight: 35
+        enabled: false
+      single_page_content_feed:
+        weight: 36
+        enabled: false
+      single_page_cta_cards_row:
+        weight: 37
+        enabled: false
+      single_page_cta_icon:
+        weight: 38
+        enabled: false
+      single_page_custom:
+        weight: 39
+        enabled: false
+      single_page_duo_tone_cta:
+        weight: 40
+        enabled: false
+      single_page_hero:
+        weight: 41
+        enabled: false
+      single_page_icon_cards_row:
+        weight: 42
+        enabled: false
+      single_page_icon_cta_row:
+        weight: 43
+        enabled: false
+      single_page_image_slider:
+        weight: 44
+        enabled: false
+      single_page_jumbo_button:
+        weight: 45
+        enabled: false
+      single_page_list:
+        weight: 46
+        enabled: false
+      single_page_list_item:
+        weight: 47
+        enabled: false
+      single_page_page_header:
+        weight: 48
+        enabled: false
+      single_page_section_header:
+        weight: 49
+        enabled: false
+      single_page_success_stories:
+        weight: 50
+        enabled: false
+      single_page_webform:
+        weight: 51
+        enabled: false
+      slider:
+        weight: 52
+        enabled: false
+      slider_image:
+        weight: 53
+        enabled: false
+      text_block:
+        weight: 54
+        enabled: false
+field_type: entity_reference_revisions

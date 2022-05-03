@@ -1,0 +1,56 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.hero_unit.field_background_image
+    - field.field.paragraph.hero_unit.field_headline
+    - field.field.paragraph.hero_unit.field_link_color
+    - field.field.paragraph.hero_unit.field_links
+    - field.field.paragraph.hero_unit.field_size
+    - field.field.paragraph.hero_unit.field_solid_colors
+    - field.field.paragraph.hero_unit.field_text
+    - field.field.paragraph.hero_unit.field_text_align
+    - field.field.paragraph.hero_unit.field_text_color
+    - paragraphs.paragraphs_type.hero_unit
+  module:
+    - link
+    - text
+id: paragraph.hero_unit.default
+targetEntityType: paragraph
+bundle: hero_unit
+mode: default
+content:
+  field_headline:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_links:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_background_image: true
+  field_link_color: true
+  field_size: true
+  field_solid_colors: true
+  field_text_align: true
+  field_text_color: true

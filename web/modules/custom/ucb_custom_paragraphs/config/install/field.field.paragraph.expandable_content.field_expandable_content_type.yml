@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_expandable_content_type
+    - paragraphs.paragraphs_type.expandable_content
+  module:
+    - options
+id: paragraph.expandable_content.field_expandable_content_type
+field_name: field_expandable_content_type
+entity_type: paragraph
+bundle: expandable_content
+label: 'Content Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

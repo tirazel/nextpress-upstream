@@ -1,0 +1,81 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sidebar
+    - node.type.page
+    - paragraphs.paragraphs_type.events_calendar
+    - paragraphs.paragraphs_type.hero_unit
+    - paragraphs.paragraphs_type.slider
+    - paragraphs.paragraphs_type.text_block
+  module:
+    - entity_reference_revisions
+id: node.page.field_sidebar
+field_name: field_sidebar
+entity_type: node
+bundle: page
+label: Sidebar
+description: 'Place content in a sidebar next to the main body. The sidebar location can be set in the theme settings.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      hero_unit: hero_unit
+      slider: slider
+      text_block: text_block
+      events_calendar: events_calendar
+    negate: 0
+    target_bundles_drag_drop:
+      article_content:
+        weight: 6
+        enabled: false
+      blockquote:
+        weight: 9
+        enabled: false
+      content_grid:
+        weight: 14
+        enabled: false
+      content_row:
+        weight: 20
+        enabled: false
+      events_calendar:
+        weight: 21
+        enabled: true
+      expandable_content:
+        weight: 22
+        enabled: false
+      expandable_content_text:
+        weight: 23
+        enabled: false
+      grid_layout_content:
+        weight: 15
+        enabled: false
+      hero_unit:
+        weight: 6
+        enabled: true
+      image_gallery:
+        weight: 26
+        enabled: false
+      media:
+        weight: 11
+        enabled: false
+      row_layout_content:
+        weight: 28
+        enabled: false
+      slider:
+        weight: 7
+        enabled: true
+      slider_image:
+        weight: 8
+        enabled: false
+      social_media_icons_block:
+        weight: 31
+        enabled: false
+      text_block:
+        weight: 9
+        enabled: true
+field_type: entity_reference_revisions

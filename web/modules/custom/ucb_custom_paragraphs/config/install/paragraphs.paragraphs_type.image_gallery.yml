@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: image_gallery
+label: 'Image Gallery'
+icon_uuid: null
+icon_default: null
+description: 'A gallery of images that can be expanded into full screen images when clicked.'
+behavior_plugins: {  }

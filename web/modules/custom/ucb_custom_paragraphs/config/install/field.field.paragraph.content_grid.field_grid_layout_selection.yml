@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_grid_layout_selection
+    - paragraphs.paragraphs_type.content_grid
+  module:
+    - options
+id: paragraph.content_grid.field_grid_layout_selection
+field_name: field_grid_layout_selection
+entity_type: paragraph
+bundle: content_grid
+label: 'Grid Layout Selection'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

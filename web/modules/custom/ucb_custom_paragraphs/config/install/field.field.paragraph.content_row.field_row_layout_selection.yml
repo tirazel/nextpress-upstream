@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_row_layout_selection
+    - paragraphs.paragraphs_type.content_row
+  module:
+    - options
+id: paragraph.content_row.field_row_layout_selection
+field_name: field_row_layout_selection
+entity_type: paragraph
+bundle: content_row
+label: 'Row Layout Selection'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: '0'
+default_value_callback: ''
+settings: {  }
+field_type: list_string
